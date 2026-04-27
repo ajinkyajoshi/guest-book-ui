@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --primary: #667eea;
+  --primary-dark: #5a67d8;
+  --danger: #e53e3e;
+  --danger-dark: #c53030;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --radius: 16px;
+}
+
+.dark {
+  --bg-card: rgba(30, 30, 50, 0.9);
+  color: #e2e8f0;
+}
+
+.dark .card,
+.dark .entry-card,
+.dark .search-bar input,
+.dark .empty-card {
+  background: rgba(30, 30, 50, 0.9) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0;
+}
+
+.dark input,
+.dark textarea {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #e2e8f0 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #718096 !important;
+}
+
+.dark .entry-message { color: #cbd5e0 !important; }
+.dark .name-row strong { color: #e2e8f0 !important; }
+.dark h2 { color: #a3bffa !important; }
+.dark label { color: #a0aec0 !important; }
+.dark .action-btn:hover { background: rgba(255,255,255,0.08) !important; }
+
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
