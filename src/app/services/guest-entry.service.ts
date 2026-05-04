@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { GuestEntry, GuestBookStats, PageResponse } from '../models/guest-entry.model';
+import { GuestEntry, GuestBookStats, Comment, PageResponse } from '../models/guest-entry.model';
 import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
@@ -38,5 +38,23 @@ export class GuestEntryService {
 
   delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+
+  // Comments
+  getComments(entryId: number): Observable<Comment[]> {
+    return this.http.get<Comment[]>(`${this.apiUrl}/${entryId}/comments`);
+  }
+
+  addComment(entryId: number, comment: Partial<Comment>): Observable<Comment> {
+    return this.http.post<Comment>(`${this.apiUrl}/${entryId}/comments`, comment);
+  }
+
+  deleteComment(entryId: number, commentId: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${entryId}/comments/${commentId}`);
+  }
+
+  // Export
+  exportCsv(): void {
+    window.open(`${environment.apiUrl}/export/csv`, '_blank');
   }
 }
