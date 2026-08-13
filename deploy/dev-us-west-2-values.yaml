@@ -4,7 +4,7 @@ app:
   version: "1.0.0"
 
 image:
-  repository: yeasy/simple-web
+  repository: hashicorp/http-echo
   tag: "latest"
 
 port: 80
