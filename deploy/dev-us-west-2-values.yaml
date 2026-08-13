@@ -4,8 +4,8 @@ app:
   version: "1.0.0"
 
 image:
-  repository: nginxdemos/hello
-  tag: "latest"
+  repository: ghcr.io/k8s-demo-apps/guest-book-ui
+  tag: "v1"
 
 port: 80
 
