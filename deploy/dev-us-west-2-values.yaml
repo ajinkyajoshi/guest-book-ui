@@ -4,7 +4,7 @@ app:
   version: "1.0.0"
 
 image:
-  repository: hashicorp/http-echo
+  repository: nginxdemos/hello
   tag: "latest"
 
 port: 80
