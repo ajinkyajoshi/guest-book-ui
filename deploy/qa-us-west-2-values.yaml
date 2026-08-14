@@ -1,0 +1,18 @@
+app:
+  name: guest-book-ui-qa
+  team: platform
+  version: "1.0.0"
+
+image:
+  repository: nginxdemos/hello
+  tag: "latest"
+
+port: 80
+
+ingress:
+  enabled: true
+  tls: false
+  host: k8s-ingressn-ingressn-bdb8ae9aa3-dac12102bf21f852.elb.us-west-2.amazonaws.com
+  path: /qa-ui
+  annotations:
+    kubernetes.io/ingress.class: nginx
