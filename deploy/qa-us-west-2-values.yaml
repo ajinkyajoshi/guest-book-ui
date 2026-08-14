@@ -9,6 +9,13 @@ image:
 
 port: 80
 
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    memory: 256Mi
+    
 ingress:
   enabled: true
   tls: false
